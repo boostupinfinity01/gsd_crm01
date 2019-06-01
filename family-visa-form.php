@@ -1,0 +1,466 @@
+        <?php  
+            include ('connection.php');
+            include ('inc/header.php'); 
+            include('inc/alert_msg.php');
+        ?>
+        
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-12">
+                        <h4 class="text-white">Family Visa Form</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item active">Family visa form</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <form class="app-search d-none d-md-block d-lg-block">
+                            <input type="text" class="form-control" placeholder="Search &amp; enter">
+                        </form>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+               
+                
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Family Visa Form</h4>
+                                <h6 class="card-subtitle">Fill all required fields </h6>
+                                <form class="m-t-40" novalidate="" id="add_family_form">
+                                    <div class="form-group">
+                                        <h5>Counselor Name <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="counselor_name" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false"> 
+                                            <div class="help-block"></div>
+                                        </div>
+                                            <!-- <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div> -->
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <h5>No. of Applicant <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="no_applicant" class="form-control" required="" data-validation-required-message="This field is required" aria-invalid="false"> 
+                                            <div class="help-block"></div>
+                                        </div>
+                                            <!-- <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div> -->
+                                    </div>
+
+            <!-- <div class="form-group">
+                <h5>Email Address <span class="text-danger">*</span></h5>
+                <div class="controls">
+                    <input type="email" name="email" class="form-control" required="" data-validation-required-message="This field is required"> <div class="help-block"></div></div>
+            </div>
+            
+            <div class="form-group">
+                <h5>File Input Field <span class="text-danger">*</span></h5>
+                <div class="controls">
+                    <input type="file" name="file" class="form-control" required=""> <div class="help-block"></div>
+                </div>
+            </div> -->
+                                    
+                                    <div class="form-group">
+                                        <h5>Name of Main Applicant <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="main_applicant_name" class="form-control" required="" data-validation-required-message="This field is required">
+                                        <div class="help-block"></div></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h5>Date of Birth <span class="text-danger">*</span></h5>
+                                        <input type="text" class="form-control" id="mdate" placeholder="" name="cdob">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h5>Passport No. <span class="text-danger">*</span></h5>
+                                        <div class="controls">
+                                            <input type="text" name="passport_no" class="form-control" required="" data-validation-required-message="This field is required" maxlength="7">
+                                        <div class="help-block"></div></div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <h5>Event Date <span class="text-danger">*</span></h5>
+                                        <input type="text" class="form-control" id="mdate1" placeholder="" name="event_date">
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <h5>Destination <span class="text-danger">*</span></h5>
+                                                <fieldset class="controls">
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="CANADA" name="styled_destin" required="" id="styled_desti1" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti1">CANADA </label>
+                                                    </div>
+                                                <div class="help-block"></div></fieldset>
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="AUSTRALIA" name="styled_destin" id="styled_desti2" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti2">AUSTRALIA </label>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="NEW ZEALAND" name="styled_destin" id="styled_desti3" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti3">NEW ZEALAND</label>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="USA" name="styled_destin" id="styled_desti4" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti4">USA </label>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="DUBAI" name="styled_destin" id="styled_desti5" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti5">DUBAI </label>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="SINGAPORE" name="styled_destin" id="styled_desti6" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti6">SINGAPORE </label>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="MALYSIA" name="styled_destin" id="styled_desti7" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti7">MALYSIA </label>
+                                                    </div>
+                                                </fieldset>
+
+
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="THAILAND" name="styled_destin" id="styled_desti8" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti8">THAILAND </label>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="EUROPE" name="styled_destin" id="styled_desti9" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti9">EUROPE </label>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="custom-control custom-radio">
+                                                        <input type="radio" value="SHENEGAN ETC" name="styled_destin" id="styled_desti10" class="custom-control-input">
+                                                        <label class="custom-control-label" for="styled_desti10">SHENEGAN ETC.</label>
+                                                    </div>
+                                                </fieldset> 
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <h5>Contact Number 1 <span class="text-danger">*</span></h5>
+                                                <div class="controls">
+                                                    <input type="text" name="cnt1" class="form-control" required="" data-validation-required-message="This field is required" maxlength="10">
+                                                <div class="help-block"></div></div>
+                                                <div class="form-control-feedback"><small>Only Allow <code>maxlength='10'</code> Digit Contact maximum number. </small></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h5>Contact Number 2 </h5>
+                                                <div class="controls">
+                                                    <input type="text" name="cnt2" class="form-control" required="" data-validation-required-message="This field is required" maxlength="10">
+                                                <div class="help-block"></div></div>
+                                                <div class="form-control-feedback"><small>Only Allow <code>maxlength='10'</code> Digit Contact maximum number. </small></div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <h5>Amount Received <span class="text-danger">*</span></h5>
+                                                <div class="controls">
+                                                    <input type="text" name="amnt_recv" class="form-control" required="" data-validation-required-message="This field is required">
+                                                <div class="help-block"></div></div>
+                                                
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h5>Amount Pending <span class="text-danger">*</span></h5>
+                                                <div class="controls">
+                                                    <input type="text" name="amnt_pend" class="form-control" required="" data-validation-required-message="This field is required">
+                                                <div class="help-block"></div></div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <h5>Anything We Need To Done From MGM Side <span class="text-danger">*</span></h5>
+                                                <div class="controls">
+                                                    <textarea name="mgm_side" id="textarea" class="form-control" required="" placeholder="Textarea text" rows="9"></textarea>
+                                                <div class="help-block"></div></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <h5>Any Refusal <span class="text-danger">*</span></h5>
+                                                <div class="controls">
+                                                    <textarea name="any_refusal" id="textarea" class="form-control" required="" placeholder="Textarea text" rows="9"></textarea>
+                                                <div class="help-block"></div></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <h5>Any Travel History <span class="text-danger">*</span></h5>
+                                                <div class="controls">
+                                                    <textarea name="travel_history" id="textarea" class="form-control" required="" placeholder="Textarea text" rows="9"></textarea>
+                                                <div class="help-block"></div></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <h5>Any Person Included in This File is a GOVT. Servant?<span class="text-danger">*</span></h5>
+                                                <div class="controls">
+                                                    <textarea name="govt_servant" id="textarea" class="form-control" required="" placeholder="Textarea text" rows="9"></textarea>
+                                                <div class="help-block"></div></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <h5>Any Remarks<span class="text-danger">*</span></h5>
+                                                <div class="controls">
+                                                    <textarea name="any_remark" id="textarea" class="form-control" required="" placeholder="Textarea text" rows="9"></textarea>
+                                                <div class="help-block"></div></div>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h5> AssignTo <span>*</span> </h5>
+                                        <div class="controls">
+                                            
+                                          <select class="form-control" name="assign_to">
+                                            <option> -- Select --</option>
+                                            <?php 
+                                                $rec_sql = "select user_id,username from users";
+                                                $rec_query = $conn->query($rec_sql);
+                                                if($rec_query->num_rows > 0){
+                                                   
+                                                   while($rec_result = $rec_query-> fetch_assoc()){
+                                            ?>
+                                                <option value="<?php echo $rec_result['user_id'];?>"> <?php echo $rec_result['username']; ?> </option>
+                                            <?php 
+                                                }
+                                                }
+                                                else{
+                                                     echo "No recode avilable";   
+                                                    } 
+                                            ?>
+                                        </select>  
+
+
+                                        </div>
+                                    </div>
+
+                                    
+                                    <div class="text-xs-right">
+                                        <button type="submit" class="btn btn-info add_family_btn" id="family_save_btn">Submit</button>
+                                        <button type="reset" class="btn btn-dark cncl_family_btn" id="family_cncl_btn">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+               
+               
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        
+                        <div class="rpanel-title">Task</div>
+                        <div class="r-panel-body">
+                            <div class="header-part">
+                                <div class="btn-group">
+                                    <button aria-expanded="false" data-toggle="dropdown" class="dropdown-toggle daydrop" type="button"> This week <span class="caret"></span></button>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="#">Todays</a></li>
+                                        <li><a href="#">Monthly</a></li>
+                                        <li><a href="#">Yearly</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="javascript:void(0)" class="text-inverse m-r-5" data-toggle="tooltip" title="Delete"><i class="ti-trash"></i></a> <a href="javascript:void(0)" data-toggle="tooltip" title="Add New" data-placement="left" class="text-inverse"><i class="ti-plus"></i></a>
+                                </div>
+                            </div>
+                            <ul class="list-task list-group">
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                        <label class="custom-control-label" for="customCheck10">Schedule Meeting</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck20">
+                                        <label class="custom-control-label" for="customCheck20">Give Purchase Report</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" data-role="task">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck30">
+                                        <label class="custom-control-label" for="customCheck30">Book Flight</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" data-role="task">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck40">
+                                        <label class="custom-control-label" for="customCheck40">Forward Tasks</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" data-role="task">
+                                    <div class="checkbox checkbox-success">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck50">
+                                            <label class="custom-control-label" for="customCheck50">Receive Shipment</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" data-role="task">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck60">
+                                        <label class="custom-control-label" for="customCheck60">Important Tasks</label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="d-flex justify-content-center">
+                                <a class="text-muted text-center" href="javascript:void(0)">View all notes</a>
+                            </div>
+                        </div>
+                        <div class="rpanel-title">Notifications <span class="label label-rouded label-megna pull-right">3</span></div>
+                        <div class="r-panel-body">
+                            <div class="message-box">
+                                <div class="message-widget">
+                                    <!-- Message -->
+                                    <a href="javascript:void(0)">
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5> <span class="mail-desc">Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been.</span> <span class="time">9:30 AM</span>
+                                        </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="javascript:void(0)">
+                                        <div class="mail-contnet">
+                                            <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span>
+                                        </div>
+                                    </a>
+                                    <!-- Message -->
+                                    <a href="javascript:void(0)">
+                                        <div class="mail-contnet">
+                                            <h5>Arijit Sinh</h5> <span class="mail-desc">Simply dummy text of the printing and typesetting industry.</span> <span class="time">9:08 AM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rpanel-title">Chat <span class="label label-rouded label-megna pull-right">5</span></div>
+                        <div class="r-panel-body">
+                            <ul class="m-t-20 chatonline">
+                                <li>
+                                    <a href="javascript:void(0)"><img src="assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <?php  include ('inc/footer.php'); ?>
+
+    <!-- ============================================================== -->
+    <!-- Plugin JavaScript -->
+    <script src="assets/node_modules/moment/moment.js"></script>
+    <script src="assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="assets/node_modules/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script>
+        // MAterial Date picker    
+        $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#mdate1').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+        $('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });
+        $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
+
+        $('#min-date').bootstrapMaterialDatePicker({ format: 'DD/MM/YYYY HH:mm', minDate: new Date() });
+    </script>
+</body>
+
+</html>
